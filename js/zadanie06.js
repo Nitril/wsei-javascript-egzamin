@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () { 
     
-    console.log("DOM fully loaded and parsed!"); 
+    //console.log("DOM fully loaded and parsed!"); 
 
 
     var button1 = document.getElementById('button-1');
