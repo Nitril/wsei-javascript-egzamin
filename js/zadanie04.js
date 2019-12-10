@@ -1,80 +1,83 @@
-// 1
-var sample_class = document.getElementsByClassName('sample_class');
+document.addEventListener("DOMContentLoaded", function () { 
+    // 1
+    var sample_class = document.getElementsByClassName('sample_class');
 
-function getTagsOfElements(elements) {
-    
-    tags = [];
-    
-    for (let i = 0; i < elements.length; i++) {
-        tags.push(elements[i].tagName);
+    function getTagsOfElements(elements) {
         
-    }
-
-    return tags
-}
-
-getTagsOfElements(sample_class);
-
-
-// 2
-
-var sample_id = document.getElementById('sample_id');
-
-function getClassesOfElement(element) {
-    listOfClasses = [];   
-   
-    for (let i = 0; i < element.classList.length; i++) {
-
-        listOfClasses.push(element.classList[i]);
+        tags = [];
         
+        for (let i = 0; i < elements.length; i++) {
+            tags.push(elements[i].tagName);
+            
+        }
+
+        return tags
     }
-    return listOfClasses
-
-}
-
-getClassesOfElement(sample_id);
-
-// 3
-
-var sample_class_2 = document.getElementsByClassName('sample_class_2')[0].getElementsByTagName("li");
-
-function getInnerTextsOfElements(elements) {
-
-    liTexts = [];
-
-    for (let i = 0; i < elements.length; i++) {
-        
-        liTexts.push(elements[i].innerText);
-
-        
-    }
-    return liTexts
+    //getTagsOfElements(sample_class)
+    console.log(getTagsOfElements(sample_class));
 
 
-}
+    // 2
 
-getInnerTextsOfElements(sample_class_2);
+    var sample_id = document.getElementById('sample_id');
 
-// 4
-
-var links = document.getElementsByTagName('a');
-
-function getAddressesOfElements(elements) {
-
-    linksList = [];
-    for (let i = 0; i < links.length; i++) {
-        linksList.push(links[i].href);
+    function getClassesOfElement(element) {
+        listOfClasses = [];   
     
+        for (let i = 0; i < element.classList.length; i++) {
+
+            listOfClasses.push(element.classList[i]);
+            
+        }
+        return listOfClasses
+
     }
-    
-    return linksList
+    // getClassesOfElement(sample_id)
+    console.log(getClassesOfElement(sample_id));
 
-}
+    // 3
 
-getAddressesOfElements(links);
+    var sample_class_2 = document.getElementsByClassName('sample_class_2')[0].getElementsByTagName("li");
 
-// 5
+    function getInnerTextsOfElements(elements) {
 
-var allChildren = document.getElementsByClassName('sample_class_3')[0].children;
+        liTexts = [];
 
-getTagsOfElements(allChildren);
+        for (let i = 0; i < elements.length; i++) {
+            
+            liTexts.push(elements[i].innerText);
+
+            
+        }
+        return liTexts
+
+
+    }
+    // getInnerTextsOfElements(sample_class_2)
+    console.log(getInnerTextsOfElements(sample_class_2));
+
+    // 4
+
+    var links = document.getElementsByTagName('a');
+
+    function getAddressesOfElements(elements) {
+
+        linksList = [];
+        for (let i = 0; i < links.length; i++) {
+            linksList.push(links[i].href);
+        
+        }
+        
+        return linksList
+
+    }
+    // getAddressesOfElements(links)
+    console.log(getAddressesOfElements(links));
+
+    // 5
+
+    var allChildren = document.getElementsByClassName('sample_class_3')[0].children;
+    // getTagsOfElements(allChildren)
+    console.log(getTagsOfElements(allChildren));
+
+}); 
